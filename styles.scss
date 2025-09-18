@@ -1,0 +1,171 @@
+body, menu {
+    background-color: rgb(163, 146, 146);
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("/assets/white-tiles-wall.jpg");
+    background-size: cover;
+    overflow: auto;
+}
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+}
+menu {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: max(15%, 200px);
+    height: fit-content;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(66, 66, 94);
+    border-radius: 20px;
+    button:not(.edit-button):not(.confirm-button):not(.cancel-button) {
+        border-radius: 20px;
+        border: solid 2px black;
+        padding: 10px;
+        font-size: 1.5rem;
+        box-shadow: 1px 1px 20px black;
+        background-color: pink;
+        &:hover {
+            transform: scale(1.05);
+            background-color: rgb(255, 180, 200);
+        }
+        transition: all 0.1s ease-out;
+        &:active {
+            background-color: rgb(255, 140, 180);
+            transform: scale(0.95);
+        }
+    }
+}
+* {
+    box-sizing: border-box;
+}
+.todo {
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    margin: 10px;
+    background: #869b2a;
+    background: linear-gradient(314deg, rgb(157, 189, 18) 0%, rgb(166, 197, 64) 65%, rgba(229, 237, 83, 1) 100%);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    word-break: break-all;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    border-radius: 35px;
+    border: solid 3px rgb(59, 59, 29);
+    box-shadow: 1px 1px 20px black;
+    position: relative;
+    button {
+        appearance: none;
+        border-radius: 100%;
+        background-color: rgb(116, 146, 35);
+        box-shadow: 1px 1px 5px black;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            background-color: rgb(90, 120, 20);
+            transform: scale(0.9);
+        }
+        transition: all 0.15s ease-out;
+    }
+    &.finished {
+        background: #2a9b57;
+        background: linear-gradient(314deg, rgba(42, 155, 87, 1) 0%, rgba(108, 186, 112, 1) 65%, rgba(98, 237, 83, 1) 100%);
+    }
+    &.dragging {
+        opacity: 0.5;
+        transform: scale(1.05);
+        transition: all 0.2s ease-in;
+        border: 2px dashed black;
+    }
+}
+.todo-text {
+    margin-top: 10px;
+    width: auto;
+    height: calc(100% - 50px);
+    overflow: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgb(212, 116, 116) #222;
+}
+.blank {
+    opacity: 0.5;
+}
+form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    textarea {
+        height: 90%;
+        font-size: 1em;
+        caret-color: yellow;
+    }
+}
+.input-editing {
+    width: 80%;
+    height: 80%;
+    font-size: 1em;
+    padding: 5px 10px;
+    resize: none;
+}
+.confirm-button {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.edit-button {
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 25px);
+}
+.cancel-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.todo-checkbox {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    overflow: hidden;
+    appearance: none;
+    width: 14%;
+    height: 14%;
+    border-radius: 3px;
+    border: solid 1px black;
+    background-color: rgb(129, 57, 57);
+    cursor: pointer;
+    &:checked {
+        background-color:#2a9b57;
+        transform: translateX(-20%);
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+    &:hover {
+        &:checked {
+            background-color: rgb(54, 122, 51);
+        }
+        background-color: rgb(170, 80, 80);
+    }
+    transition: all 0.2s ease;
+}
+.todos-container {
+    width: 750px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    gap: 20px;
+}

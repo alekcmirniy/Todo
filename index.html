@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo List</title>
+        <meta charset="UTF8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="icon" href="./assets/favicon.png" />
+    </head>
+    <body>
+        <div class="menu-container">
+            <menu>
+                <button class="buttons new-todo-button">New</button> <!-- тут будет плюсик -->
+                <button class="buttons mark-as-completed-button">Mark as completed</button> <!-- тут будет галочка -->
+                <button class="buttons delete-todo-button">Delete selected</button> <!-- тут будет минус -->
+                <button class="buttons clear-finished-todos-button">Clear completed</button> <!-- тут будет крестик -->
+                <button class="buttons clear-all-todos-button">Clear all</button> <!-- тут будет крестик -->
+            </menu>
+            <menu>
+                <button class="buttons hide-completed-button">Hide completed</button>
+            </menu>
+        </div>
+        <div class="todos-container"></div>
+        <script src="/index.js"></script>
+    </body>
+</html>
