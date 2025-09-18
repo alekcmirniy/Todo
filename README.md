@@ -71,9 +71,9 @@ todo-app/
 ├── assets/             # Static files (icons, background)
 ├── index.html          # Main HTML file
 ├── styles.scss         # SCSS source
+├── styles.css.map      # CSS map file
 ├── styles.css          # Compiled CSS
 ├── index.js            # App logic
-├── .gitignore          # Git ignore rules
 ├── LICENSE             # MIT License
 └── README.md           # Project documentation
 
