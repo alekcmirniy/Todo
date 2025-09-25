@@ -1,4 +1,5 @@
 # Todo App
+<img width="1903" height="937" alt="image" src="https://github.com/user-attachments/assets/5e35eefb-1435-4209-b134-079071988d5e" />
 
 Кратко: Минималистичное веб-приложение для управления списком задач (add/edit/complete/delete) с drag&drop и адаптивным интерфейсом.
 
